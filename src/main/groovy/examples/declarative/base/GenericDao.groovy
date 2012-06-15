@@ -8,7 +8,7 @@ import java.sql.ResultSet
 import java.sql.SQLException;
 
 
-class GenericDao extends Dao {
+class GenericDao implements Dao {
 	
 	def mappedClass
 	def tableName
@@ -33,7 +33,7 @@ class GenericDao extends Dao {
 	def add(obj) {
 		fieldNames="";
 		questionMarks="";
-		values = new ArrayList<Object>();
+		values = [];
 
 		for (it in this.mappings) {
 			
@@ -79,8 +79,8 @@ class GenericDao extends Dao {
 		return this.jdbcTemplate.query("select * from EMAIL;", new RowMapper() {
 			def mapRow(ResultSet rs, int rowNum){
 				try {
-					List<Class> types = new ArrayList<Class>();
-					List<Object> arguments = new ArrayList<Object>();
+					List<Class> types = []
+					List<Object> arguments = []
 					for (mapping in GenericDao.this.mappings) {
 						types.add(mapping.getPropertyType());
 						arguments.add(mapping.getValueFromResultSet(rs));

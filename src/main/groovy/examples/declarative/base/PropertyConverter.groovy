@@ -21,20 +21,22 @@ abstract class PropertyConverter {
 
 		abstract getPropertyType();
 	
-		abstract getValueFromResultSet(String columnName, ResultSet rs) throws SQLException;
+		abstract getValueFromResultSet(String columnName, ResultSet rs);
 	
 		// *************************************************************** //
 	
-		static getConverterForType(Class<?> type) {
-			if (type.equals(String.class)) {
-				return new StringConverter()
+		static def converters = [(String):new StringConverter(),(Date):new DateConverter()]
+		
+		static getConverterForType(type) {
+			try
+			{
+				return converters[type]
 			}
-			else if (type.equals(Date.class)) {
-				return new DateConverter()
-			}
-			else {
+			catch (Exception e){
 				throw new GroovyRuntimeException("Cannot create converter for ".join(type.name))
 			}
+			
+			
 		}
 	
 	

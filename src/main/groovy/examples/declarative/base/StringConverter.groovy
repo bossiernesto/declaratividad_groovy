@@ -11,7 +11,7 @@ class StringConverter extends PropertyConverter {
 	}
 
 	@Override
-	def getValueFromResultSet(String columnName, ResultSet rs) throws SQLException {
+	def getValueFromResultSet(String columnName, ResultSet rs) {
 		return rs.getString(columnName);
 	}
 }
