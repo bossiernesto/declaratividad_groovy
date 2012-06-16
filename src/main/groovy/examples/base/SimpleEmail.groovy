@@ -1,4 +1,4 @@
-package main.groovy.examples.base
+package examples.base
 
 class SimpleEmail implements Email {
 	

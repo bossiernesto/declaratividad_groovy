@@ -1,4 +1,4 @@
-package main.groovy.examples.declarative.base
+package examples.declarative.base
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

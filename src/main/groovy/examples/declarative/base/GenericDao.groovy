@@ -1,6 +1,6 @@
-package main.groovy.examples.declarative.base
+package examples.declarative.base
 
-import main.groovy.examples.base.Dao
+import examples.base.Dao
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import java.lang.reflect.Constructor;

@@ -1,9 +1,9 @@
-package main.groovy.examples.declarative.base
+package examples.declarative.base
 
 import java.sql.ResultSet;
-import main.groovy.examples.utils.StringUtils
-import main.groovy.examples.declarative.base.StringConverter
-import main.groovy.examples.declarative.base.DateConverter
+import examples.utils.StringUtils
+import examples.declarative.base.StringConverter
+import examples.declarative.base.DateConverter
 import java.sql.SQLException;
 
 abstract class PropertyConverter {

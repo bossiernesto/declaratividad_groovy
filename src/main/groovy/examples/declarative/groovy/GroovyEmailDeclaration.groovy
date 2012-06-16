@@ -1,12 +1,12 @@
-package main.groovy.examples.declarative.groovy
+package examples.declarative.groovy
 
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import main.groovy.examples.declarative.base.GenericDao
-import main.groovy.examples.declarative.base.StringConverter
-import main.groovy.examples.declarative.base.DateConverter
-import main.groovy.examples.base.Dao
-import main.groovy.examples.base.SimpleEmail
+import examples.declarative.base.GenericDao
+import examples.declarative.base.StringConverter
+import examples.declarative.base.DateConverter
+import examples.base.Dao
+import examples.base.SimpleEmail
 
 
 public class GroovyEmailDaoDeclaration {

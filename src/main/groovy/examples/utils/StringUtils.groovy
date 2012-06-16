@@ -1,4 +1,4 @@
-package main.groovy.examples.utils
+package examples.utils
 
 class StringUtils {
 
