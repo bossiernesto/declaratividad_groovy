@@ -7,8 +7,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import examples.base.*;
 
-public class ImperativeEmailDao implements Dao {
-	public JdbcTemplate jdbcTemplate;
+class ImperativeEmailDao implements Dao {
+	def jdbcTemplate;
 
 	def ImperativeEmailDao(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
