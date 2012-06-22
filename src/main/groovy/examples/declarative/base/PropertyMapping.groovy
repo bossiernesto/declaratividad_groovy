@@ -45,7 +45,7 @@ class PropertyMapping {
 		return this.converter.getPropertyType();
 	}
 
-	def setPropertyType(Class<?> type) {
+	def setPropertyType(type) {
 		this.converter = PropertyConverter.getConverterForType(type);
 	}
 
