@@ -2,11 +2,11 @@ package examples.base
 
 class SimpleEmail implements Email {
 	
-	private String message
-	private String fromAddress
-	private String toAddress
-	private String subject
-	private String sent
+	def message
+	def fromAddress
+	def toAddress
+	def subject
+	def sent
 	
 	SimpleEmail(String from, String to, String subject, String message, Date date) {
 		this.fromAddress = from;
