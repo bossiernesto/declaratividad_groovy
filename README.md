@@ -8,6 +8,9 @@ esto, se basa sobre una interfaz en común denominada Home
 
 ##Implementación de los Home
 
+Todos las implementaciones que se muestran en este ejemplo, incluyendo el motor que permite solucionar este problema
+delcarativamente implementan la siguiente intefaz:
+
 ```
 interface Home {
 
