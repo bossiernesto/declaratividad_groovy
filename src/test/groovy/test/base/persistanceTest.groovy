@@ -1,7 +1,5 @@
 package test.base
 
-import java.util.Date
-
 import org.springframework.context.support.ClassPathXmlApplicationContext
 import org.springframework.jdbc.core.JdbcTemplate
 import groovy.util.GroovyTestCase
@@ -55,18 +53,17 @@ class persistanceTest extends GroovyTestCase {
 	}
 	
 	/*Tests*/
-	
 	void testSize(){
-		assertEquals(12, this.emailDao.findAll().size())
+		assertLength(12, this.emailDao.findAll().size())
 	}
 
 	void testInsert(){
 		Email email = new SimpleEmail(homeroEmail, vendedorChinoEmail, "nuevo mail", "", new Date())
 		this.emailDao.add(email)
-		assertEquals(13, this.emailDao.findAll().size())
+		assertLength(13, this.emailDao.findAll().size())
 	}
 
-	void testAllMessagesSameThread() throws Exception {
+	void testAllMessagesSameThread(){
 		for (email in this.emailDao.findAll()) {
 			if (!email.getSubject().equals(this.subject)) {
 				failNotEquals("There is a message from a different thread.", this.subject, email.getSubject())
