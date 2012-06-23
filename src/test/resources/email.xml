@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping mappedClass="examples.base.SimpleEmail" tableName="EMAIL">
+	<property propertyName="fromAddress" columnName="FROMEMAIL" propertyType="java.lang.String"/>
+	<property propertyName="toAddress" columnName="TOEMAIL" propertyType="java.lang.String"/>
+	<property propertyName="subject" columnName="SUBJECT" propertyType="java.lang.String"/>
+	<property propertyName="message" columnName="MESSAGE" propertyType="java.lang.String"/>
+	<property propertyName="sent" columnName="SENT" propertyType="java.util.Date"/>
+</mapping>
