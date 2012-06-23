@@ -53,7 +53,6 @@ class GenericDao implements Home {
 	}
 
 
-	@SuppressWarnings("unchecked")
 	def findAll() {
 		return this.jdbcTemplate.query("select * from EMAIL;", new RowMapper() {
 			public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -74,7 +73,6 @@ class GenericDao implements Home {
 	/**
 	 * Esto no sirve más pero lo dejo como otro ejemplo de reflection.
 	 */
-	@SuppressWarnings("unchecked")
 	def oldFindAll() {
 		return this.jdbcTemplate.query("select * from EMAIL;", new RowMapper() {
 			def mapRow(ResultSet rs, int rowNum){
