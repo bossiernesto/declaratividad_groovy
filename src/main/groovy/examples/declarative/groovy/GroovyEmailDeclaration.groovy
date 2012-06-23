@@ -1,7 +1,7 @@
 package examples.declarative.groovy
 
 
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate
 import examples.declarative.base.GenericDao
 import examples.declarative.base.StringConverter
 import examples.declarative.base.DateConverter
@@ -16,6 +16,6 @@ public class GroovyEmailDaoDeclaration {
 			.addProperty("toAddress", "TOEMAIL", new StringConverter())
 			.addProperty("subject", "SUBJECT", new StringConverter())
 			.addProperty("message", "MESSAGE", new StringConverter())
-			.addProperty("sent", "SENT", new DateConverter());
+			.addProperty("sent", "SENT", new DateConverter())
 	}
 }

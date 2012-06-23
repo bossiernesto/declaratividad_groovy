@@ -23,10 +23,10 @@ class AnnotatedDaoDeclaration {
 		tableName = this.getTableName()
 		dao = new GenericDao(jdbcTemplate, mappedClass, tableName)
 
-		for (method in this.mappedClass.getMethods()) {
-			if (this.isProperty(method)) {
-				dao.addProperty(StringUtils.propertyName(method.getName()), this.getColumnName(method), this
-					.getConverter(method))
+		this.mappedClass.getMethods().each{
+			if (this.isProperty(it)) {
+				dao.addProperty(StringUtils.propertyName(it.getName()), this.getColumnName(it), this
+					.getConverter(it))
 			}
 		}
 		return dao

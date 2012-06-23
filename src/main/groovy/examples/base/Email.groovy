@@ -2,14 +2,14 @@ package examples.base
 
 interface Email {
 
-	def getMessage();
+	def getMessage()
 	
-	def getFromAddress();
+	def getFromAddress()
 	
-	def getToAddress();
+	def getToAddress()
 	
-	def getSubject();
+	def getSubject()
 	
-	def getSent();
+	def getSent()
 	
 }

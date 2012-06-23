@@ -2,7 +2,7 @@ package examples.base
 
 interface Home {
 
-	def add(obj);
+	def add(obj)
 	
-	def findAll();
+	def findAll()
 }

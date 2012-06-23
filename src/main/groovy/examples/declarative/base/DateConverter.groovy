@@ -8,12 +8,12 @@ class DateConverter extends PropertyConverter {
 	
 	@Override
 	def getPropertyType() {
-		return Date.class;
+		return Date.class
 	}
 
 	@Override
 	def getValueFromResultSet(String columnName, ResultSet rs) {
-		return rs.getDate(columnName);
+		return rs.getDate(columnName)
 	}
 }
 	

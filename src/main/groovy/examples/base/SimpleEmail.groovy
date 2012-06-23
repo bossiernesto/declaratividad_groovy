@@ -9,11 +9,11 @@ class SimpleEmail implements Email {
 	def sent
 	
 	SimpleEmail(String from, String to, String subject, String message, Date date) {
-		this.fromAddress = from;
-		this.toAddress = to;
-		this.subject = subject;
-		this.message = message;
-		this.sent = date;
+		this.fromAddress = from
+		this.toAddress = to
+		this.subject = subject
+		this.message = message
+		this.sent = date
 	}
 
 	
