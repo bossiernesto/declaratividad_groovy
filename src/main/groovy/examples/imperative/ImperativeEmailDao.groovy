@@ -1,17 +1,17 @@
 package examples.imperative
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import examples.base.*;
+import java.sql.ResultSet
+import java.sql.SQLException
+import java.util.List
+import org.springframework.jdbc.core.JdbcTemplate
+import org.springframework.jdbc.core.RowMapper
+import examples.base.*
 
-class ImperativeEmailDao implements Dao {
-	def jdbcTemplate;
+class ImperativeEmailDao implements Home {
+	def jdbcTemplate
 
 	def ImperativeEmailDao(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
+		this.jdbcTemplate = jdbcTemplate
 	}
 
 	def add(email) {
@@ -21,7 +21,7 @@ class ImperativeEmailDao implements Dao {
 				email.getToAddress(), //
 				email.getSubject(), //
 				email.getMessage(), //
-				new java.sql.Date(email.getSent().getTime()) ] as Object[]);
+				new java.sql.Date(email.getSent().getTime()) ] as Object[])
 	}
 
 	def findAll() {
@@ -32,8 +32,8 @@ class ImperativeEmailDao implements Dao {
 					rs.getString("TOEMAIL"), //
 					rs.getString("SUBJECT"), //
 					rs.getString("MESSAGE"),//
-					rs.getDate("SENT"));
+					rs.getDate("SENT"))
 			}
-		});
+		})
 	}
 }

@@ -1,6 +1,6 @@
 package examples.declarative.base
 
-import examples.base.Dao
+import examples.base.Home
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import java.lang.reflect.Constructor;
@@ -8,7 +8,7 @@ import java.sql.ResultSet
 import java.sql.SQLException;
 
 
-class GenericDao implements Dao {
+class GenericDao implements Home {
 	
 	def mappedClass
 	def tableName

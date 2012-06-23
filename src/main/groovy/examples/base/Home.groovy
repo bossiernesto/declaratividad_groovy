@@ -1,6 +1,6 @@
 package examples.base
 
-interface Dao {
+interface Home {
 
 	def add(obj);
 	
