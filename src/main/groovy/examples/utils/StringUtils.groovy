@@ -14,8 +14,8 @@ class StringUtils {
 	def findMethodsNameByAffix(String affix,String propertyName,Class clazz){
 		expr='/^'.join(affix).join('[A-Z]/')
 		methods=clazz.methods
-		methods_selecction= {it.methods.name.findAll{ it =~ expr }.collect{ it[3].toLowerCase()+it[4..-1] }.join(', ')}
-		return methods_selecction.find{it.name==affix.join(propertyName)}.name
+		methods_selection= {it.methods.name.findAll{ it =~ expr }.collect{ it[3].toLowerCase()+it[4..-1] }.join(', ')}
+		return methods_selection.find{it.name==affix.join(propertyName)}.name
 		}
 	
 	static String propertyName(String methodName) {
