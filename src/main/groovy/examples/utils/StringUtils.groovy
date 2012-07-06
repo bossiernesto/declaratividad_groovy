@@ -11,11 +11,11 @@ class StringUtils {
 		return this.findMethodsNameByAffix('get',propertyName,clazz)
 		}
 	
-	def findMethodsNameByAffix(String affix,String propertyName,Class clazz){
-		expr='/^'.join(affix).join('[A-Z]/')
+	def findMethodsNameByAffix(String prefix,String propertyName,Class clazz){
+		expr='/^'.join(prefix).join('[A-Z]/')
 		methods=clazz.methods
 		methods_selection= {it.methods.name.findAll{ it =~ expr }.collect{ it[3].toLowerCase()+it[4..-1] }.join(', ')}
-		return methods_selection.find{it.name==affix.join(propertyName)}.name
+		return methods_selection.find{it.name==prefix.join(propertyName)}.name
 		}
 	
 	static String propertyName(String methodName) {
