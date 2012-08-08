@@ -54,7 +54,7 @@ class GenericDao implements Home {
 
 
 	def findAll() {
-		return this.jdbcTemplate.query("select * from EMAIL", new RowMapper() {
+		return this.jdbcTemplate.query("select * from ${this.tableName}", new RowMapper() {
 			public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
 				try {
 					Object result = mappedClass.newInstance()
@@ -72,7 +72,7 @@ class GenericDao implements Home {
 	 * Esto no sirve más pero lo dejo como otro ejemplo de reflection.
 	 */
 	def oldFindAll() {
-		return this.jdbcTemplate.query("select * from EMAIL", new RowMapper() {
+		return this.jdbcTemplate.query("select * from ${this.tableName}", new RowMapper() {
 			def mapRow(ResultSet rs, int rowNum){
 				try {
 					List<Class> types = []
