@@ -68,30 +68,4 @@ class GenericDao implements Home {
 		})
 	}
 
-	/**
-	 * Esto no sirve más pero lo dejo como otro ejemplo de reflection.
-	 */
-	def oldFindAll() {
-		return this.jdbcTemplate.query("select * from ${this.tableName}", new RowMapper() {
-			def mapRow(ResultSet rs, int rowNum){
-				try {
-					List<Class> types = []
-					List<Object> arguments = []
-					
-					GenericDao.this.mappings.each{
-						types.add(it.getPropertyType())
-						arguments.add(it.getValueFromResultSet(rs))
-					}
-
-					constructor = mappedClass.getConstructor(types.toArray([] as Class[]))
-					return constructor.newInstance(arguments.toArray())
-				}
-				catch (Exception e) {
-					throw new RuntimeException(e)
-				}
-			}
-		})
-	}
-
-
 }
